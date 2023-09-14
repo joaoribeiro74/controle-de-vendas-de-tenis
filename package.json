@@ -1,0 +1,26 @@
+{
+  "name": "controle-de-vendas-de-tenis",
+  "version": "1.0.0",
+  "description": "Site de compra de tênis com intuito de controle sobre as compras",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaoribeiro74/controle-de-vendas-de-tenis.git"
+  },
+  "keywords": [],
+  "author": "joaoribeiro74",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaoribeiro74/controle-de-vendas-de-tenis/issues"
+  },
+  "homepage": "https://github.com/joaoribeiro74/controle-de-vendas-de-tenis#readme",
+  "dependencies": {
+    "xyz": "^4.0.0"
+  },
+  "devDependencies": {
+    "abc": "^0.6.1"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "xyz",
+  "version": "4.0.0",
+  "description": "Publish npm packages with fewer screw-ups",
+  "license": "WTFPL",
+  "author": "David Chambers <dc@davidchambers.me>",
+  "keywords": [
+    "cli",
+    "publish",
+    "release",
+    "tool"
+  ],
+  "files": [
+    "/LICENSE",
+    "/README.md",
+    "/package.json",
+    "/xyz"
+  ],
+  "bin": "./xyz",
+  "homepage": "https://github.com/davidchambers/xyz",
+  "bugs": "https://github.com/davidchambers/xyz/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidchambers/xyz.git"
+  },
+  "dependencies": {}
+}
