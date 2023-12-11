@@ -1,0 +1,626 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.primeira {
+  background-color: #f6f6f3;
+  width: 100%;
+  padding: 0px 1.5rem;
+}
+
+.segunda {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 0px 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .primeira {
+    padding: 0.35rem;
+  }
+
+  .segunda {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.entrar {
+  text-decoration: none;
+  color: black;
+}
+
+.entrar-login {
+  border: none;
+  background-color: #f6f6f3;
+}
+
+.pipe {
+  font-weight: 500;
+  padding: 0rem 1rem;
+}
+
+.catalogo {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clientes {
+  flex-direction: row;
+  display: flex;
+  gap: 12px;
+}
+
+.secao {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  padding: 1.5rem 1.5rem;
+}
+
+.menu {
+  list-style-type: none;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CaixaDePesquisa_pesquisa {
+  border: none;
+  background: transparent;
+  padding: 0rem 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.iconeBusca {
+  vertical-align: top;
+}
+
+.CaixaDePesquisa_produtos {
+  border: none;
+  background: transparent;
+  outline: none;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  width: 90%;
+  flex-grow: 1;
+}
+
+.CaixaDePesquisa {
+  display: flex;
+  flex-direction: row-reverse;
+  background: #f6f6f3;
+  border-radius: 10rem;
+  height: 3rem;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.busca_icones {
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.Favoritos_compras {
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+  border: 0px;
+  background: none;
+  position: relative;
+}
+
+.icones {
+  user-select: none;
+}
+
+.capa {
+  margin-top: 127px;
+  width: 100%;
+}
+
+.navbar-bars {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding-left: 15px;
+}
+
+.navbar-carrinho {
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+  border: 0px;
+  background: none;
+}
+
+.navbar-logo {
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+  border: 0px;
+  background: none;
+}
+
+.CaixaDePesquisa-mobile {
+  display: flex;
+  flex-direction: row-reverse;
+  background: #f6f6f3;
+  border-radius: 10rem;
+  height: 3rem;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.CaixaDePesquisa_pesquisa-mobile {
+  border: none;
+  background: transparent;
+  padding: 0rem 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.CaixaDePesquisa_produtos-mobile {
+  border: none;
+  background: transparent;
+  outline: none;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.buscar-mobile {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-top: 1.25rem;
+  width: 100%;
+}
+
+@media (min-width: 750px) {
+  .botao-novidades {
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    width: auto;
+  }
+
+  .preco {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .botao-novidades {
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    width: auto;
+    border-radius: 5px;
+  }
+
+  .nome-tenis {
+    font-size: 9px;
+  }
+
+  .preco {
+    font-size: 12px;
+  }
+
+  .mais-vendidos {
+    font-size: 1.25rem;
+  }
+}
+
+.novidades {
+  padding: 3rem 2rem;
+}
+
+@media (max-width: 1000px) {
+  .novidades {
+    padding: 1rem 1rem;
+    width: 100%;
+  }
+}
+
+.span-imagem {
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  width: initial;
+  background: none;
+  opacity: 1;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+.produtos {
+  text-decoration: none;
+  color: black;
+}
+
+.nome-tenis {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.preco {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.imagem-tenis {
+  width: 100%;
+}
+
+.sneakers {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media (max-width: 1000px) {
+  .sneakers {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .buscar {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .segunda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.imagem-basquete {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.mais-vendidos {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (min-width: 750px) and (max-width: 1000px) {
+  .mais-vendidos {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mais-vendidos {
+    font-size: 3rem;
+  }
+}
+
+.botao-carrossel {
+  color: #000000;
+}
+
+.carousel-control-prev {
+  opacity: 10;
+  width: 13%;
+  bottom: 5rem;
+  margin: 0;
+}
+
+.carousel-control-next {
+  opacity: 10;
+  width: 13%;
+  bottom: 5rem;
+}
+
+@media (max-width: 1000px) {
+  .carousel-control-next {
+    bottom: 1.8rem;
+  }
+
+  .carousel-control-prev {
+    bottom: 1.8rem;
+  }
+}
+
+footer {
+  background: #f6f6f3;
+  padding: 1rem;
+}
+
+.footer-fare {
+  color: #000000;
+  position: relative;
+  text-align: center;
+  margin-bottom: 0px;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.slide-mais-vendidos {
+  margin-bottom: 30px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+  text-align: center;
+}
+
+.modal-dialog {
+  text-align: left;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  background-color: #ffffff;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao-login {
+  cursor: pointer;
+  text-align: center;
+}
+
+.login {
+  padding: 0.5rem 3rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.label-conectar:checked {
+  background-color: #000000;
+  border: #000000;
+}
+
+.modal-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+
+.form-group {
+  padding-bottom: 15px;
+}
+
+.email-fonte,
+.senha {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.form-check-label {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  align-items: center;
+}
+
+.error-message {
+  color: rgb(255, 0, 0);
+  margin-top: 3px;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.esquecer {
+  color: #000000;
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.cadastre-se-div {
+  text-align: center;
+}
+
+.cadastre-se-agora {
+  color: #000000;
+  font-size: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.form-control::placeholder {
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.botao-comprar {
+  color: #ffffff;
+  background-color: #000000;
+  width: 100%;
+  padding: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  border: none;
+  border-radius: 50px;
+}
+
+.comprar-btn {
+  display: none;
+}
+
+.produto:hover .comprar-btn {
+  display: block;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f6f6f3;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 999;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.sidebar a:hover {
+  color: #000000;
+}
+
+.sidebar .closebtn {
+  padding: 0rem;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 35px;
+  margin-left: 50px;
+  color: black;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 16px;
+  transition: margin-left 0.5s;
+  width: calc(
+    100% - 250px
+  ); /* Ajusta a largura para ocupar a tela inteira menos a largura da sidebar */
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navegacao {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divisao {
+  padding-bottom: 6rem;
+}
+
+.primeira-navegacao {
+  padding-top: 3rem;
+}
+
+.minha-conta {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 6rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.minha-conta-link {
+  border: none;
+  background-color: #f6f6f3;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.regiao-bandeira {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.regiao {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 10px;
+}
+
+.botao-mc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-minha-conta {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 1rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  border: none;
+  border-radius: 5px;
+}

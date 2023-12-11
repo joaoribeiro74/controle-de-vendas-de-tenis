@@ -1,0 +1,500 @@
+{
+  "tenis": [
+    {
+      "name": "Air Jordan 4 Military Black",
+      "gender": "Masculino",
+      "price": 2599.99,
+      "priceParcelado": 259.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Air Jordan 4 Military Black.webp",
+        "../../../assets/img/SneakerPage/AJ4MB(2).webp",
+        "../../../assets/img/SneakerPage/AJ4MB(3).webp",
+        "../../../assets/img/SneakerPage/AJ4MB(4).webp"
+      ]
+    },
+    {
+      "name": "Adidas Forum 84 Low ADV Cloud White",
+      "gender": "Masculino",
+      "price": 899.99,
+      "priceParcelado": 89.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Forum 84 Low ADV Cloud White (2).webp",
+        "../../../assets/img/SneakerPage/AF84LADV(2).webp",
+        "../../../assets/img/SneakerPage/AF84LADV(3).webp",
+        "../../../assets/img/SneakerPage/AF84LADV(4).webp",
+        "../../../assets/img/SneakerPage/AF84LADV(5).webp",
+        "../../../assets/img/SneakerPage/AF84LADV(6).webp"
+      ]
+    },
+    {
+      "name": "Air Jordan 1 High Heritage",
+      "gender": "Masculino",
+      "price": 999.99,
+      "priceParcelado": 99.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Air Jordan 1 - Heritage (1).webp",
+        "../../../assets/img/SneakerPage/AJ1HH(2).webp",
+        "../../../assets/img/SneakerPage/AJ1HH(3).webp",
+        "../../../assets/img/SneakerPage/AJ1HH(4).webp"
+      ]
+    },
+    {
+      "name": "Puma Slipstream White Black",
+      "gender": "Masculino",
+      "price": 599.99,
+      "priceParcelado": 59.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Puma Slipstream White Black.webp",
+        "../../../assets/img/SneakerPage/PSWB(2).webp",
+        "../../../assets/img/SneakerPage/PSWB(3).webp",
+        "../../../assets/img/SneakerPage/PSWB(4).webp",
+        "../../../assets/img/SneakerPage/PSWB(5).webp",
+        "../../../assets/img/SneakerPage/PSWB(6).webp"
+      ]
+    },
+    {
+      "name": "Puma MB.02 Jade",
+      "gender": "Masculino",
+      "price": 1099.99,
+      "priceParcelado": 109.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Puma MB.02 Jade.webp",
+        "../../../assets/img/SneakerPage/PMB02(2).webp",
+        "../../../assets/img/SneakerPage/PMB02(3).webp",
+        "../../../assets/img/SneakerPage/PMB02(4).webp"
+      ]
+    },
+    {
+      "name": "Air Jordan 4 Red Thunder",
+      "gender": "Masculino",
+      "price": 1899.99,
+      "priceParcelado": 189.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Air Jordan 4 Red Thunder.webp",
+        "../../../assets/img/SneakerPage/AJ4RT.webp",
+        "../../../assets/img/SneakerPage/AJ4RT(2).webp",
+        "../../../assets/img/SneakerPage/AJ4RT(2).webp"
+      ]
+    },
+    {
+      "name": "Jordan Tatum 1 Barbershop",
+      "gender": "Masculino",
+      "price": 1199.99,
+      "priceParcelado": 119.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Jordan Tatum 1 Barbershop.webp",
+        "../../../assets/img/SneakerPage/JT1B(2).webp",
+        "../../../assets/img/SneakerPage/JT1B(3).webp",
+        "../../../assets/img/SneakerPage/JT1B(4).webp",
+        "../../../assets/img/SneakerPage/JT1B(5).webp",
+        "../../../assets/img/SneakerPage/JT1B(6).webp"
+      ]
+    },
+    {
+      "name": "Jordan Luka 2 Nebula",
+      "gender": "Masculino",
+      "price": 1459.99,
+      "priceParcelado": 145.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Jordan Luka 2 Nebula.webp",
+        "../../../assets/img/SneakerPage/JL2N(2).webp",
+        "../../../assets/img/SneakerPage/JL2N(3).webp",
+        "../../../assets/img/SneakerPage/JL2N(4).webp",
+        "../../../assets/img/SneakerPage/JL2N(5).webp",
+        "../../../assets/img/SneakerPage/JL2N(6).webp"
+      ]
+    },
+    {
+      "name": "Air Jordan 1 Mid Alternate Bred Toe",
+      "gender": "Masculino",
+      "price": 1499.99,
+      "priceParcelado": 149.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/AJ1MABT.webp",
+        "../../../assets/img/SneakerPage/AJ1MABT(2).webp",
+        "../../../assets/img/SneakerPage/AJ1MABT(3).webp",
+        "../../../assets/img/SneakerPage/AJ1MABT(4).webp",
+        "../../../assets/img/SneakerPage/AJ1MABT(5).webp",
+        "../../../assets/img/SneakerPage/AJ1MABT(6).webp"
+      ]
+    },
+    {
+      "name": "Adidas ADI2000 Triple Black",
+      "gender": "Masculino",
+      "price": 799.99,
+      "priceParcelado": 79.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/ADI2000TB.webp",
+        "../../../assets/img/SneakerPage/ADI2000TB(2).webp",
+        "../../../assets/img/SneakerPage/ADI2000TB(3).webp",
+        "../../../assets/img/SneakerPage/ADI2000TB(4).webp",
+        "../../../assets/img/SneakerPage/ADI2000TB(5).webp",
+        "../../../assets/img/SneakerPage/ADI2000TB(6).webp"
+      ]
+    },
+    {
+      "name": "Nike Dunk Low Rose Whisper",
+      "gender": "Feminino",
+      "price": 1099.99,
+      "priceParcelado": 109.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Nike Dunk Low Rose Whisper.webp",
+        "../../../assets/img/SneakerPage/NDLRW(2).webp",
+        "../../../assets/img/SneakerPage/NDLRW(3).webp",
+        "../../../assets/img/SneakerPage/NDLRW(4).webp"
+      ]
+    },
+    {
+      "name": "Air Jordan 1 Low Sky J Purple",
+      "gender": "Masculino",
+      "price": 1589.99,
+      "priceParcelado": 158.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Air Jordan 1 Low.webp",
+        "../../../assets/img/SneakerPage/Air Jordan 1 Low (2).webp",
+        "../../../assets/img/SneakerPage/Air Jordan 1 Low (3).webp",
+        "../../../assets/img/SneakerPage/Air Jordan 1 Low (4).webp",
+        "../../../assets/img/SneakerPage/Air Jordan 1 Low (5).webp",
+        "../../../assets/img/SneakerPage/Air Jordan 1 Low (6).webp"
+      ]
+    },
+    {
+      "name": "Nike Dunk Low GS Active Fuchsia",
+      "gender": "Feminino",
+      "price": 1699.99,
+      "priceParcelado": 169.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Nike Dunk Low GS Active Fuchsia.webp",
+        "../../../assets/img/SneakerPage/NDLGSACF(2).webp",
+        "../../../assets/img/SneakerPage/NDLGSACF(3).webp",
+        "../../../assets/img/SneakerPage/NDLGSACF(4).webp",
+        "../../../assets/img/SneakerPage/NDLGSACF(5).webp",
+        "../../../assets/img/SneakerPage/NDLGSACF(6).webp"
+      ]
+    },
+    {
+      "name": "New Balance 550 White Green",
+      "gender": "Masculino",
+      "price": 1999.99,
+      "priceParcelado": 199.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/New Balance 550 White Green.jpg",
+        "../../../assets/img/SneakerPage/NB550WG(2).webp",
+        "../../../assets/img/SneakerPage/NB550WG(3).webp",
+        "../../../assets/img/SneakerPage/NB550WG(4).webp",
+        "../../../assets/img/SneakerPage/NB550WG(5).webp"
+      ]
+    },
+    {
+      "name": "Nike Zoom LeBron NXXT Gen White",
+      "gender": "Masculino",
+      "price": 1799.99,
+      "priceParcelado": 179.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/NZLGW.webp",
+        "../../../assets/img/SneakerPage/NZLGW(2).webp",
+        "../../../assets/img/SneakerPage/NZLGW(3).webp",
+        "../../../assets/img/SneakerPage/NZLGW(4).webp",
+        "../../../assets/img/SneakerPage/NZLGW(5).webp"
+      ]
+    },
+    {
+      "name": "Nike Dunk Low GS Black White Panda",
+      "gender": "Feminino",
+      "price": 1049.99,
+      "priceParcelado": 104.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/Nike Dunk Low GS Black White Panda.webp",
+        "../../../assets/img/SneakerPage/NDLGSBWP.webp",
+        "../../../assets/img/SneakerPage/NDLGSBWP(2).webp",
+        "../../../assets/img/SneakerPage/NDLGSBWP(3).webp",
+        "../../../assets/img/SneakerPage/NDLGSBWP(4).webp",
+        "../../../assets/img/SneakerPage/NDLGSBWP(6).webp"
+      ]
+    },
+    {
+      "name": "Nike Dunk Low Coast",
+      "gender": "Feminino",
+      "price": 1999.99,
+      "priceParcelado": 199.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/NDLCF.jpeg",
+        "../../../assets/img/SneakerPage/NDLCF(2).jpeg",
+        "../../../assets/img/SneakerPage/NDLCF(3).jpeg",
+        "../../../assets/img/SneakerPage/NDLCF(4).jpeg",
+        "../../../assets/img/SneakerPage/NDLCF(5).jpeg",
+        "../../../assets/img/SneakerPage/NDLCF(6).jpeg"
+      ]
+    },
+    {
+      "name": "Air Jordan 1 High Lucky Green",
+      "gender": "Feminino",
+      "price": 2999.99,
+      "priceParcelado": 299.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/AJ1HLG.webp",
+        "../../../assets/img/SneakerPage/AJ1HLG(2).webp",
+        "../../../assets/img/SneakerPage/AJ1HLG(3).webp",
+        "../../../assets/img/SneakerPage/AJ1HLG(4).webp",
+        "../../../assets/img/SneakerPage/AJ1HLG(5).webp",
+        "../../../assets/img/SneakerPage/AJ1HLG(6).webp"
+      ]
+    },
+    {
+      "name": "Air Jordan 1 Low OG Black Cement",
+      "gender": "Feminino",
+      "price": 799.99,
+      "priceParcelado": 79.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/AJ1LOGBC.webp",
+        "../../../assets/img/SneakerPage/AJ1LOGBC(2).webp",
+        "../../../assets/img/SneakerPage/AJ1LOGBC(3).webp",
+        "../../../assets/img/SneakerPage/AJ1LOGBC(4).webp",
+        "../../../assets/img/SneakerPage/AJ1LOGBC(5).webp",
+        "../../../assets/img/SneakerPage/AJ1LOGBC(6).webp"
+      ]
+    },
+    {
+      "name": "NOCTA x Nike Air Force 1 Low GS White",
+      "gender": "Feminino",
+      "price": 1549.99,
+      "priceParcelado": 154.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/AF1LGSW.webp",
+        "../../../assets/img/SneakerPage/AF1LGSW(2).webp",
+        "../../../assets/img/SneakerPage/AF1LGSW(3).webp",
+        "../../../assets/img/SneakerPage/AF1LGSW(4).webp",
+        "../../../assets/img/SneakerPage/AF1LGSW(5).webp",
+        "../../../assets/img/SneakerPage/AF1LGSW(6).webp"
+      ]
+    },
+    {
+      "name": "Air Jordan 4 Red Cement",
+      "gender": "Feminino",
+      "price": 1699.99,
+      "priceParcelado": 169.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/AJ4RC(1).webp",
+        "../../../assets/img/SneakerPage/AJ4RC.webp",
+        "../../../assets/img/SneakerPage/AJ4RC(2).webp",
+        "../../../assets/img/SneakerPage/AJ4RC(3).webp",
+        "../../../assets/img/SneakerPage/AJ4RC(4).webp",
+        "../../../assets/img/SneakerPage/AJ4RC(5).webp"
+      ]
+    },
+    {
+      "name": "Adidas Gazelle Bold Cloud White",
+      "gender": "Feminino",
+      "price": 899.99,
+      "priceParcelado": 89.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/AGBCW.webp",
+        "../../../assets/img/SneakerPage/AGBCW(2).webp",
+        "../../../assets/img/SneakerPage/AGBCW(3).webp",
+        "../../../assets/img/SneakerPage/AGBCW(4).webp",
+        "../../../assets/img/SneakerPage/AGBCW(5).webp",
+        "../../../assets/img/SneakerPage/AGBCW(6).webp"
+      ]
+    },
+    {
+      "name": "Adidas ADI2000 Black White",
+      "gender": "Feminino",
+      "price": 999.99,
+      "priceParcelado": 99.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/AADI2000BW.webp",
+        "../../../assets/img/SneakerPage/AADI2000BW(2).webp",
+        "../../../assets/img/SneakerPage/AADI2000BW(3).webp",
+        "../../../assets/img/SneakerPage/AADI2000BW(4).webp"
+      ]
+    },
+    {
+      "name": "Puma-180 Perf Alpine Snow Frosted Ivory",
+      "gender": "Feminino",
+      "price": 949.99,
+      "priceParcelado": 94.99,
+      "sizes": ["34", "35", "36", "37", "38", "39", "40", "41"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/PPASFI.webp",
+        "../../../assets/img/SneakerPage/PPASFI(2).webp",
+        "../../../assets/img/SneakerPage/PPASFI(3).webp",
+        "../../../assets/img/SneakerPage/PPASFI(4).webp"
+      ]
+    },
+    {
+      "name": "Jordan Tatum 1 Pink Lemonade",
+      "gender": "Masculino",
+      "price": 1499.99,
+      "priceParcelado": 149.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/JT1PL.webp",
+        "../../../assets/img/SneakerPage/JT1PL(2).webp",
+        "../../../assets/img/SneakerPage/JT1PL(3).webp",
+        "../../../assets/img/SneakerPage/JT1PL(4).webp",
+        "../../../assets/img/SneakerPage/JT1PL(5).webp",
+        "../../../assets/img/SneakerPage/JT1PL(6).webp"
+      ]
+    },
+    {
+      "name": "Puma MB.02 Imbalance",
+      "gender": "Masculino",
+      "price": 1299.99,
+      "priceParcelado": 129.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/PMB02I.webp",
+        "../../../assets/img/SneakerPage/PMB02I(2).webp",
+        "../../../assets/img/SneakerPage/PMB02I(3).webp",
+        "../../../assets/img/SneakerPage/PMB02I(4).webp",
+        "../../../assets/img/SneakerPage/PMB02I(5).webp",
+        "../../../assets/img/SneakerPage/PMB02I(6).webp"
+      ]
+    },
+    {
+      "name": "Air Jordan 1 High Next Chapter",
+      "gender": "Masculino",
+      "price": 1799.99,
+      "priceParcelado": 179.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/AJ1HNC.webp",
+        "../../../assets/img/SneakerPage/AJ1HNC(2).webp",
+        "../../../assets/img/SneakerPage/AJ1HNC(3).webp",
+        "../../../assets/img/SneakerPage/AJ1HNC(4).webp",
+        "../../../assets/img/SneakerPage/AJ1HNC(5).webp",
+        "../../../assets/img/SneakerPage/AJ1HNC(6).webp"
+      ]
+    },
+    {
+      "name": "Adidas Forum Low Pulse Blue",
+      "gender": "Masculino",
+      "price": 699.99,
+      "priceParcelado": 69.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/AFLPB.webp",
+        "../../../assets/img/SneakerPage/AFLPB(2).webp",
+        "../../../assets/img/SneakerPage/AFLPB(3).webp",
+        "../../../assets/img/SneakerPage/AFLPB(4).webp",
+        "../../../assets/img/SneakerPage/AFLPB(5).webp",
+        "../../../assets/img/SneakerPage/AFLPB(6).webp"
+      ]
+    },
+    {
+      "name": "New Balance 550 Sea Salt True Red",
+      "gender": "Masculino",
+      "price": 1199.99,
+      "priceParcelado": 119.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/NB550SSTR.webp",
+        "../../../assets/img/SneakerPage/NB550SSTR(2).webp",
+        "../../../assets/img/SneakerPage/NB550SSTR(3).webp",
+        "../../../assets/img/SneakerPage/NB550SSTR(4).webp",
+        "../../../assets/img/SneakerPage/NB550SSTR(5).webp",
+        "../../../assets/img/SneakerPage/NB550SSTR(6).webp"
+      ]
+    },
+    {
+      "name": "Puma Slipstream LTH Black",
+      "gender": "Masculino",
+      "price": 599.99,
+      "priceParcelado": 59.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/PSLTHB.webp",
+        "../../../assets/img/SneakerPage/PSLTHB(2).webp",
+        "../../../assets/img/SneakerPage/PSLTHB(3).webp",
+        "../../../assets/img/SneakerPage/PSLTHB(4).webp",
+        "../../../assets/img/SneakerPage/PSLTHB(5).webp",
+        "../../../assets/img/SneakerPage/PSLTHB(6).webp"
+      ]
+    },
+    {
+      "name": "Jordan Luka 2 Space Hunter",
+      "gender": "Masculino",
+      "price": 1589.99,
+      "priceParcelado": 158.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/JL2SH.webp",
+        "../../../assets/img/SneakerPage/JL2SH(2).webp",
+        "../../../assets/img/SneakerPage/JL2SH(3).webp",
+        "../../../assets/img/SneakerPage/JL2SH(4).webp",
+        "../../../assets/img/SneakerPage/JL2SH(5).webp",
+        "../../../assets/img/SneakerPage/JL2SH(6).webp"
+      ]
+    },
+    {
+      "name": "TIGHTBOOTH x Nike SB Dunk Low Pro Black White",
+      "gender": "Masculino",
+      "price": 1899.99,
+      "priceParcelado": 189.99,
+      "sizes": ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "stock": true,
+      "images": [
+        "../../../assets/img/SneakerPage/TNSBDLPBW.webp",
+        "../../../assets/img/SneakerPage/TNSBDLPBW(2).webp",
+        "../../../assets/img/SneakerPage/TNSBDLPBW(3).webp",
+        "../../../assets/img/SneakerPage/TNSBDLPBW(4).webp",
+        "../../../assets/img/SneakerPage/TNSBDLPBW(5).webp",
+        "../../../assets/img/SneakerPage/TNSBDLPBW(6).webp"
+      ]
+    }
+  ]
+}

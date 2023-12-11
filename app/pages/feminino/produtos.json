@@ -1,0 +1,44 @@
+{
+  "sneakers": [
+    {
+      "name": "Nike Dunk Low Coast",
+      "image": "../../../assets/img/NDLCF.jpeg",
+      "price": 1999.99
+    },
+    {
+      "name": "Air Jordan 1 High Lucky Green",
+      "image": "../../../assets/img/AJ1HLG.webp",
+      "price": 2999.99
+    },
+    {
+      "name": "Air Jordan 1 Low OG Black Cement",
+      "image": "../../../assets/img/SneakerPage/AJ1LOGBC.webp",
+      "price": 799.99
+    },
+    {
+      "name": "NOCTA x Nike Air Force 1 Low GS White",
+      "image": "../../../assets/img/AF1LGSW.webp",
+      "price": 1549.99
+    },
+    {
+      "name": "Air Jordan 4 Red Cement",
+      "image": "../../../assets/img/AJ4RC(1).webp",
+      "price": 1699.99
+    },
+    {
+      "name": "Adidas Gazelle Bold Cloud White",
+      "image": "../../../assets/img/AGBCW.webp",
+      "price": 899.99
+    },
+    {
+      "name": "Puma-180 Perf Alpine Snow Frosted Ivory",
+      "image": "../../../assets/img/PPASFI.webp",
+      "price": 949.99
+    },
+    {
+      "name": "Adidas ADI2000 Black White",
+      "image": "../../../assets/img/AADI2000BW.webp",
+      "price": 999.99
+    }
+  ]
+}

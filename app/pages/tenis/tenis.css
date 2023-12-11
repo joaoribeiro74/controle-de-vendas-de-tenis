@@ -1,0 +1,282 @@
+@media (min-width: 1000px) {
+  .container-fluid {
+    padding: 0px 10rem;
+    padding-top: 150px;
+  }
+
+  .detalhes-produto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    column-gap: 1rem;
+    box-sizing: border-box;
+  }
+
+  .imagens-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .info-imagens {
+    padding-right: 3rem;
+  }
+
+  .imagens-lista {
+    list-style-type: none;
+  }
+
+  .tamanho-quantidade {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .preco {
+    padding: 0px;
+    margin-bottom: 0;
+    font-size: 30px;
+  }
+
+  .preco-produto {
+    margin-top: 2rem;
+  }
+
+  .preco-parcelado {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+  }
+
+  .tamanho-quantidade {
+    margin-top: 4rem;
+  }
+
+  .genero-titulo {
+    font-family: "Inter", sans-serif;
+  }
+
+  .dropdown-item {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .dropdown-toggle {
+    background-color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .estoque-situacao {
+    color: #33d17a;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .estoque {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .botao-adicionar {
+    text-align: start;
+  }
+
+  .adicionar-carrinho {
+    color: #ffffff;
+    background-color: #000000;
+    width: 50%;
+    padding: 0.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    border: none;
+    border-radius: 50px;
+  }
+
+  .dropdown-toggle {
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+  }
+
+  .dropdown-menu {
+    border-color: #000000;
+  }
+
+  .dropdown-divider {
+    border-color: #000000;
+  }
+
+  .tamanho-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .tamanho-button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #fff;
+  }
+
+  .tamanho-button.active {
+    background-color: #33d17a;
+    color: #fff;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container-fluid {
+    padding-top: 150px;
+    padding-left: 0;
+    padding-right: 2rem;
+  }
+
+  .detalhes-produto {
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: auto;
+    column-gap: 0.25rem;
+    box-sizing: border-box;
+  }
+
+  .imagens-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    gap: 0.5rem;
+  }
+
+  .imagens-lista {
+    list-style-type: none;
+  }
+
+  .tamanho-quantidade {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .info-imagens {
+    text-align: center;
+    padding-left: 2rem;
+  }
+
+  .nome-tenis {
+    font-size: 30px;
+  }
+
+  .preco {
+    padding: 0px;
+    margin-bottom: 0;
+    font-size: 25px;
+  }
+
+  .preco-produto {
+    margin-top: 2rem;
+    font-size: 12px;
+  }
+
+  .preco-parcelado {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+  }
+
+  .tamanho-quantidade {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .genero-titulo {
+    font-family: "Inter", sans-serif;
+  }
+
+  .dropdown-item {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .dropdown-toggle {
+    background-color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+  }
+
+  .estoque-situacao {
+    color: #33d17a;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .estoque {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .adicionar-carrinho {
+    color: #ffffff;
+    background-color: #000000;
+    width: 100%;
+    padding: 0.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+  }
+
+  .dropdown-toggle {
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+  }
+
+  .dropdown-menu {
+    border-color: #000000;
+  }
+
+  .dropdown-divider {
+    border-color: #000000;
+  }
+
+  .tamanho-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .tamanho-button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #fff;
+  }
+
+  .tamanho-button.active {
+    background-color: #33d17a;
+    color: #fff;
+  }
+
+  .buscar-mobile {
+    padding-bottom: 1rem;
+  }
+}

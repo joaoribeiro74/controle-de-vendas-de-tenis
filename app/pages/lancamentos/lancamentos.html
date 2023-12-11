@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fare</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../lancamentos/secao.css">
+</head>
+
+<body>
+  <header style="background-color: #f6f6f3;" id="user-info">
+    <div class="primeira navbar navbar-expand-lg">
+        <div class="ms-sm-2 collapse navbar-collapse">
+            <a class="navbar-brand" href="../../index.html">
+                <svg width="45" height="27" viewBox="0 0 45 27" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="45" height="26.3208" fill="url(#pattern0)" />
+                <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_33_6" transform="matrix(0.00328947 0 0 0.00562394 0 -0.0792657)" />
+                </pattern>
+                <image id="image0_33_6" width="304" height="206" xlink:href="data:image/png;base64,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" />
+                </defs>
+                </svg>
+            </a>
+        </div>
+
+        <div class="justify-content-start">
+            <button class="navbar-logo d-lg-none d-xl-none" type="button" data-toggle="modal" data-target="#myModal" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+              <a href="../../index.html">
+                <span class="logo-escondida">
+                    <svg width="20" height="25" viewBox="0 0 40 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="11" fill="black" />
+                        <rect y="25" width="40" height="11" fill="black" />
+                        <rect y="25" width="12" height="37" fill="black" />
+                      </svg>
+                </span>
+              </a>
+            </button>
+          </div>
+
+          <div class="justify-content-end">
+            <button class="navbar-carrinho d-lg-none d-xl-none" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="carrinho">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 576 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                          svg {
+                            fill: #000000
+                          }
+                        </style>
+                        <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                    </svg>
+                </span>
+            </button>
+            <button class="navbar-toggler navbar-bars d-lg-none d-xl-none" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="bars">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                </span>
+            </button>
+          </div>  
+
+      <div class="clientes ms-sm-2 collapse navbar-collapse justify-content-end d-none d-lg-block" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <button class="entrar-login" id="login-link" type="button" data-toggle="modal" data-target="#myModal" href="#">Login</button>
+            </li>
+            <li class="nav-item">
+                <span id="pipe-link" class="pipe">|</span>
+            </li>
+            <li class="nav-item">
+                <a class="entrar" id="cadastro-link" href="../../pages/cadastro/cadastro.html">Cadastro</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="segunda navbar navbar-expand-lg">
+        <div class="tamanho-logo ms-sm-2 collapse navbar-collapse">
+          <span class="EeO1gono72zCwsLm8rKyo7qBMSywLRPVryFAHcAy3XKGhSvQYMGbe">
+            <a class="logo" target="_self" href="../../index.html">
+              <svg width="40" height="62" viewBox="0 0 40 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="11" fill="black" />
+                <rect y="25" width="40" height="11" fill="black" />
+                <rect y="25" width="12" height="37" fill="black" />
+              </svg>
+            </a>
+          </span>
+        </div>
+        <div class="catalogo-escolha ms-sm-2 collapse navbar-collapse">
+          <nav role="menubar" class="catalogo">
+            <li role="menuitem" class="menu">
+              <a aria-label="Lançamentos" class="secao" href="../lancamentos/lancamentos.html">Lançamentos</a>
+            </li>
+            <li role="menuitem" class="menu">
+              <a aria-label="Masculino" class="secao" href="../masculino/masculino.html">Masculino</a>
+            </li>
+            <li role="menuitem" class="menu">
+              <a aria-label="Feminino" class="secao" href="../feminino/feminino.html">Feminino</a>
+            </li>
+          </nav>
+        </div>
+        <div class="busca_icones">
+          <div class="buscar ms-sm-2 collapse navbar-collapse">
+            <form role="search" class="CaixaDePesquisa">
+              <input type="text" placeholder="Buscar" name="search" aria-label="Buscar produtos" autocomplete="off" value class="CaixaDePesquisa_produtos">
+              <button aria-label="Pesquisar" class="CaixaDePesquisa_pesquisa">
+                <svg class="iconeBusca" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                  <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                </svg>
+              </button>
+            </form>  
+          </div>
+          <div class="busca_icones ms-sm-2 collapse navbar-collapse">
+            <button class="Favoritos_compras" type="button" id="search-icon" data-toggle="modal" data-target="#myModal">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <style>
+                  svg {
+                    fill: #000000
+                  }
+                </style>
+                <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+              </svg>
+            </button>
+            <button class="Favoritos_compras" type="button" id="outro-icon" data-toggle="modal" data-target="#myModal">
+              <svg class="icones" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <style>
+                svg {
+                  fill: #000000
+                }
+                </style>
+                <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+              </svg>
+            </button>
+          </div>
+          <div class="buscar-mobile d-lg-none d-xl-none">
+              <form role="search" class="CaixaDePesquisa-mobile">
+                <input type="text" placeholder="Buscar" name="search" aria-label="Buscar produtos" autocomplete="off" value class="CaixaDePesquisa_produtos-mobile">
+                <button aria-label="Pesquisar" class="CaixaDePesquisa_pesquisa">
+                  <svg class="iconeBusca" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                  </svg>
+                </button>
+              </form>
+        </div>
+      </div>
+    </header>
+
+    <div class="sidebar d-lg-none d-xl-none">
+      <div class="navegacao">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a class="primeira-navegacao" href="/app/pages/lancamentos/lancamentos.html">LANÇAMENTOS</a>
+        <p>____________________________</p>
+        <a href="/app/pages/masculino/masculino.html">MASCULINO</a>
+        <p>____________________________</p>
+        <a class="ultima-navegacao" href="/app/pages/feminino/feminino.html">FEMININO</a>
+        <p class="divisao">____________________________</p>
+      </div>
+      <div class="minha-conta">
+        <p>ACESSO RÁPIDO</p>
+        <button class="minha-conta-link" type="button" data-toggle="modal" data-target="#myModal">MINHA CONTA</button>
+      </div>
+      <div class="regiao-bandeira">
+        <span class="regiao">REGIÃO
+          <span class="iconify" data-icon="flag:br-4x3" data-width="15" data-height="15"></span>
+        </span>
+      </div>
+      <div class="botao-mc">
+        <button class="botao-minha-conta" type="button" data-toggle="modal" data-target="#myModal">MINHA CONTA</button>
+        <a class="cadastre-se-aqui" href="../cadastro/cadastro.html" style="font-size: 11px; text-decoration: underline; padding-top: 0.5rem;">Ainda não tem uma conta? CADASTRE-SE AQUI</a>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="botao-fechar">
+              <button type="button" class="close botao-fechar" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="titulo-modal">
+              <h4 class="modal-title">LOGIN</h4>
+            </div>
+      
+            <div class="modal-body">
+              <form id="loginForm" onsubmit="validateForm(); return false;">
+                <div class="form-group">
+                  <label class="email-fonte" for="email">EMAIL:</label>
+                  <input type="email" class="form-control" id="email" name="email" required placeholder="Digite seu email">
+                  
+                  <div class="error-message" id="emailErrorMessage"></div>
+                </div>
+                <div class="form-group">
+                  <label class="senha" for="password">SENHA:</label>
+                  <input type="password" class="form-control" id="password" name="password" required placeholder="Digite sua senha">
+                  <a class="esquecer" href="#">ESQUECEU SUA SENHA?</a>
+  
+                  <div class="error-message" id="passwordErrorMessage"></div>
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input label-conectar" id="rememberMe">
+                  <label class="form-check-label" for="rememberMe">Mantenha-me conectado</label>
+                </div>
+                <div class="botao-login">
+                <button type="submit" class="login">ENTRAR</button>
+                </div>
+                <div class="cadastre-se-div">
+                  <a class="cadastre-se-agora" href="../cadastro/cadastro.html">NÃO POSSUI CONTA? CADASTRE-SE AGORA</a>
+                </div>
+              </form>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+      <div class="barra" style="background-color: #f6f6f3;">
+        <div>
+          <p class="barra-titulo">LANÇAMENTOS</p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="filtros">
+            <div class="svg-filtro">
+                <span>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 14V16H6V14H0ZM0 2V4H10V2H0ZM10 18V16H18V14H10V12H8V18H10ZM4 6V8H0V10H4V12H6V6H4ZM18 10V8H8V10H18ZM12 6H14V4H18V2H14V0H12V6Z" fill="black"/>
+                    </svg>                    
+                </span>
+            </div>
+
+
+            <div class="dropdown">
+                <button class=" dropdown-toggle" type="button" id="dropdownMenuButtonPrice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Preço
+                </button>
+    
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonPrice">
+                  <a class="dropdown-item" data-filter="price" data-min="0" data-max="1000">R$ 0 - R$ 1000</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" data-filter="price" data-min="1000" data-max="1500">R$ 1000 - R$ 1500</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" data-filter="price" data-min="1500" data-max="2000">R$ 1500 - R$ 2000</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" data-filter="price" data-min="2000" data-max="30000">Acima de R$ 2000</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class=" dropdown-toggle" type="button" id="dropdownMenuButtonSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Classificar por
+                </button>
+    
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonSort">
+                    <a class="dropdown-item" data-sort="menor-preco" >MENOR PREÇO</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" data-sort="maior-preco" >MAIOR PREÇO</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item"  data-sort="alfabetica" >NOME DO PRODUTO: A - Z</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" data-sort="alfabetica-reversa" >NOME DO PRODUTO: Z - A</a>
+                </div>
+            </div>
+            <div>
+              <button id="reset-filters" class="desfazer-filtros">Desfazer filtros</button>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="sneakers container-fluid">
+      <div class="row" style="gap: 1.5rem 0px;" id="sneakers-container">
+            
+      </div>
+    </div>
+
+    <footer>
+      <p class="footer-fare">© 2023 Fare.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../../scripts/main.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</body>
+</html>

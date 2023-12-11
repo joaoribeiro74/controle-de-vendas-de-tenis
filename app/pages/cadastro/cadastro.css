@@ -1,0 +1,106 @@
+@media (min-width: 1000px) {
+  .barra {
+    margin-top: 130px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .barra {
+    margin-top: 30px;
+  }
+}
+
+.barra-titulo {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  text-align: center;
+  font-size: 20px;
+  padding: 0.5rem;
+  padding-top: 1rem;
+}
+
+.cadastro {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  padding: 0.5rem;
+}
+
+input:invalid + .error-message {
+  display: block;
+}
+
+input:valid + .error-message {
+  display: none;
+}
+
+.titulos-label {
+  font-family: "Inter", sans-serif;
+}
+
+.botao-cadastro {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.form-control {
+  outline: none;
+  background-color: var(--color-dark1);
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.span-required {
+  display: none;
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  color: red;
+  margin: 3px 0 0 1px;
+}
+
+.cadastrar {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  padding: 0.5rem 3rem;
+  border-radius: 5px;
+}
+
+.mensagem-cadastro {
+  text-align: center;
+}
+
+.form-group {
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+}
+
+.form-control::placeholder {
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+footer {
+  background: #f6f6f3;
+  padding: 1rem;
+}
+
+.footer-fare {
+  color: #000000;
+  position: relative;
+  text-align: center;
+  margin-bottom: 0px;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+@media (min-width: 1000px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

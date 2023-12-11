@@ -1,0 +1,44 @@
+{
+  "sneakers": [
+    {
+      "name": "Jordan Tatum 1 Pink Lemonade",
+      "image": "../../../assets/img/JT1PL.webp",
+      "price": 1499.99
+    },
+    {
+      "name": "Puma MB.02 Imbalance",
+      "image": "../../../assets/img/PMB02I.webp",
+      "price": 1299.99
+    },
+    {
+      "name": "Air Jordan 1 High Next Chapter",
+      "image": "../../../assets/img/AJ1HNC.png",
+      "price": 1799.99
+    },
+    {
+      "name": "Adidas Forum Low Pulse Blue",
+      "image": "../../../assets/img/AFLPB(4).webp",
+      "price": 699.99
+    },
+    {
+      "name": "New Balance 550 Sea Salt True Red",
+      "image": "../../../assets/img/NB550SSTR.webp",
+      "price": 1199.99
+    },
+    {
+      "name": "Puma Slipstream LTH Black",
+      "image": "../../../assets/img/PSLTHB.webp",
+      "price": 599.99
+    },
+    {
+      "name": "Jordan Luka 2 Space Hunter",
+      "image": "../../../assets/img/JL2SH.webp",
+      "price": 1589.99
+    },
+    {
+      "name": "TIGHTBOOTH x Nike SB Dunk Low Pro Black White",
+      "image": "../../../assets/img/TNSBDLPBW.webp",
+      "price": 1899.99
+    }
+  ]
+}

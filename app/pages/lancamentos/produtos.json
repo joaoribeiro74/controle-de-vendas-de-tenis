@@ -1,0 +1,44 @@
+{
+  "sneakers": [
+    {
+      "name": "Air Jordan 4 Military Black",
+      "image": "../../../assets/img/Air Jordan 4 Military Black.webp",
+      "price": 2599.99
+    },
+    {
+      "name": "Adidas Forum 84 Low ADV Cloud White",
+      "image": "../../../assets/img/Forum 84 Low ADV Cloud White (2).webp",
+      "price": 899.99
+    },
+    {
+      "name": "Air Jordan 1 High Heritage",
+      "image": "../../../assets/img/Air Jordan 1 - Heritage (1).webp",
+      "price": 999.99
+    },
+    {
+      "name": "Puma Slipstream White Black",
+      "image": "../../../assets/img/Puma Slipstream White Black.webp",
+      "price": 549.99
+    },
+    {
+      "name": "Puma MB.02 Jade",
+      "image": "../../../assets/img/Puma MB.02 Jade.webp",
+      "price": 1099.99
+    },
+    {
+      "name": "Air Jordan 4 Red Thunder",
+      "image": "../../../assets/img/Air Jordan 4 Red Thunder.webp",
+      "price": 1899.99
+    },
+    {
+      "name": "Jordan Tatum 1 Barbershop",
+      "image": "../../../assets/img/Jordan Tatum 1 Barbershop.webp",
+      "price": 1199.99
+    },
+    {
+      "name": "Jordan Luka 2 Nebula",
+      "image": "../../../assets/img/Jordan Luka 2 Nebula.webp",
+      "price": 1459.99
+    }
+  ]
+}
