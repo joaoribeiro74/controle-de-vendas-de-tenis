@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 localStorage.setItem('selectedTenis', JSON.stringify(selectedTenis));
 
-                window.location.href = "app/pages/perfil/perfil.html";
+                window.location.href = "../../pages/perfil/perfil.html";
               } else {
                 console.error('Usuário não está logado. Redirecionar para a página de login ou exibir mensagem.');
               }
@@ -311,7 +311,7 @@ fetch("produtos.json")
           const botaoMinhaConta = document.querySelector('.botao-minha-conta');
   
           minhaContaLink.addEventListener('click', () => {
-            window.location.href = 'app/pages/perfil/perfil.html';
+            window.location.href = '../perfil/perfil.html';
           });
   
           botaoMinhaConta.textContent = 'LOGOUT / SAIR';

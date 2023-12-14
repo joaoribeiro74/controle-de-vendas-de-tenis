@@ -477,7 +477,7 @@
               const botaoMinhaConta = document.querySelector('.botao-minha-conta');
       
               minhaContaLink.addEventListener('click', () => {
-                window.location.href = 'app/pages/perfil/perfil.html';
+                window.location.href = 'perfil.html';
               });
       
               botaoMinhaConta.textContent = 'LOGOUT / SAIR';
@@ -497,7 +497,7 @@
         function handleLogout(event) {
           event.preventDefault();
       
-          localStorage.setItem('redirectUrl', window.location.href);
+          localStorage.setItem('redirectUrl', '../../../index.html');
       
           localStorage.removeItem('loggedin');
       
@@ -713,7 +713,7 @@
     svgIconMeusEnderecos.style.fill = '#f6f6f3';
     svgIconMeusPedidos.style.fill = ''; 
   });
- A
+  
   meusPedidosLink.addEventListener('click', function () { 
     informacoesDiv.style.display = 'none';
     enderecosDiv.style.display = 'none';
@@ -780,5 +780,6 @@
   }
 });
 </script>
+
 </body>
 </html>
