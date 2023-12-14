@@ -64,6 +64,19 @@
         padding-top: 1rem;
     }
 
+    .meus-pedidos {
+        background-color: #f6f6f3;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        border-radius: 10px;
+        padding-top: 1rem;
+    }
+
+    .dados-pedidos {
+        padding: 1rem;
+    }
+
     .navegacao-titulo:hover {
         background-color: #000;
         color: #f6f6f3;
@@ -113,7 +126,38 @@
         font-family: 'Inter', sans-serif;
         font-weight: 900;
     }
+
+    .dados-endereco {
+        padding: 1rem;
+    }
+
+    .botao-editar-endereco {
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+    }
     
+    .dados-endereco label {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+
+    .css-botao-endereco {
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: #000000;
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        padding: 0.5rem 3rem;
+    }
+    
+}
+
+.infoCompra {
+    padding-bottom: 1rem;
 }
 
 .modal-body {
@@ -156,7 +200,7 @@
         font-family: 'Inter', sans-serif;
         font-weight: 900;
         font-size: 15px;
-        width: 60%;
+        width: 100%;
     }
 
     .navegacao-item {
@@ -185,6 +229,14 @@
         padding: 0;
     }
 
+    .dados-endereco label {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+
     .linha {
         display: flex;
         justify-content: center;
@@ -208,6 +260,12 @@
         padding: 0.5rem;
         border-radius: 10px;
     }
+
+    .meus-pedidos {
+        background-color: #f6f6f3;
+        border-radius: 10px;
+        padding-top: 0.5rem;
+    }
     
     .informacoes-cliente {
         padding: 0.5rem;
@@ -223,6 +281,31 @@
 
     .container-fluid {
         padding-bottom: 5rem;
+    }
+
+    .meus-enderecos {
+        background-color: #f6f6f3;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .dados-endereco {
+        padding: 0.5rem;
+    }
+
+    .css-botao-endereco {
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: #000000;
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        padding: 0.5rem 3rem;
+    }
+
+    .botao-editar-endereco {
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -240,6 +323,11 @@ footer {
     width: 100%;
     margin-top: 3rem;
     }
+
+.erro-input {
+    border: 1px solid red;  
+    }
+
 
 
 

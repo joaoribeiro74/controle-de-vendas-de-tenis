@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const tenisName = urlParams.get("tenis");
 
   if (tenisName) {
+    const loggedIn = localStorage.getItem('loggedin') === 'true';
+
     fetch("tenis.json")
       .then((response) => response.json())
       .then((data) => {
@@ -24,11 +26,32 @@ document.addEventListener("DOMContentLoaded", function () {
             tenis.priceParcelado,
             tenis.gender,
             tenis.sizes,
-            tenis.stock
+            tenis.stock,
+            loggedIn
           );
 
           document.getElementById("image-gallery").innerHTML = imageGallery;
           document.getElementById("product-info").innerHTML = productInfo;
+
+          const buyButton = document.querySelector('.adicionar-carrinho');
+          if (buyButton) {
+            buyButton.addEventListener('click', function() {
+              if (loggedIn) {
+                const selectedTenis = {
+                  name: tenis.name,
+                  gender: tenis.gender,
+                  size: localStorage.getItem('selectedSize'),
+                  price: tenis.price.toFixed(2),
+                };
+
+                localStorage.setItem('selectedTenis', JSON.stringify(selectedTenis));
+
+                window.location.href = "/app/pages/perfil/perfil.html";
+              } else {
+                console.error('Usuário não está logado. Redirecionar para a página de login ou exibir mensagem.');
+              }
+            });
+          }
         } else {
           console.error(`Tênis com o nome "${tenisName}" não encontrado.`);
         }
@@ -54,18 +77,18 @@ function createImageGallery(images) {
     `;
 }
 
-function createProductInfo(name, price, priceParcelado, gender, sizes, stock) {
+function createProductInfo(name, price, priceParcelado, gender, sizes, stock, loggedIn) {
   const dropdown = `
         <div class="tamanho-quantidade">
             <div class="dropdown">
-                <button class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     TAMANHO
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     ${sizes
                       .map(
                         (size) =>
-                          `<a class="dropdown-item">${size}</a><div class="dropdown-divider"></div>`
+                          `<a class="dropdown-item" onclick="handleSizeSelection('${size}')">${size}</a><div class="dropdown-divider"></div>`
                       )
                       .join("")}
                 </div>
@@ -86,11 +109,17 @@ function createProductInfo(name, price, priceParcelado, gender, sizes, stock) {
         </div>
     `;
 
-  const addToCartButton = `
-        <div class="botao-adicionar">
-            <button class="adicionar-carrinho" type="button" data-toggle="modal" data-target="#myModal">ADICIONAR AO CARRINHO</button>
-        </div>
-    `;
+  const addToCartButton = loggedIn
+    ? `
+    <div class="botao-adicionar">
+        <button class="adicionar-carrinho" type="button" onclick="handleBuy()">COMPRAR</button>
+    </div>
+  `
+    : `
+    <div class="botao-adicionar">
+        <button class="adicionar-carrinho" type="button" data-toggle="modal" data-target="#myModal">COMPRAR</button>
+    </div>
+  `;
 
   return `
         <div class="info-imagens">
@@ -110,6 +139,11 @@ function createProductInfo(name, price, priceParcelado, gender, sizes, stock) {
         </div>
     `;
 }
+
+window.handleSizeSelection = function(size) {
+  localStorage.setItem('selectedSize', size);
+};
+
 
 let sneakersData;
 let appliedFilters = {};
@@ -221,139 +255,141 @@ fetch("produtos.json")
     console.error("Erro ao obter dados do arquivo JSON:", error)
   );
 
-document.addEventListener("DOMContentLoaded", () => {
-  const loggedIn = localStorage.getItem("loggedin");
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+  const loggedIn = localStorage.getItem('loggedin');
+  let formData;
+
+  try {
+    formData = JSON.parse(localStorage.getItem('formData')) || {};
+    console.log('formData:', formData);
+  } catch (error) {
+    formData = {};
+    console.error('Erro ao obter formData do localStorage:', error);
+  }
+
+  console.log('loggedIn:', loggedIn);
 
   if (loggedIn) {
-    console.log("Usuário logado");
-
-    const userInfoContainer = document.getElementById("user-info");
-
-    if (userInfoContainer) {
-      const cadastroLink = document.getElementById("cadastro-link");
-
-      if (cadastroLink) {
-        const logoutLink = document.createElement("a");
-        logoutLink.href = "#";
-        logoutLink.textContent = "Logout / Sair";
-        logoutLink.style.textDecoration = "none";
-        logoutLink.style.color = "black";
-        logoutLink.addEventListener("click", handleLogout);
-
-        cadastroLink.parentNode.replaceChild(logoutLink, cadastroLink);
+    console.log('Usuário logado');
+  
+        const userInfoContainer = document.getElementById('user-info');
+  
+        if (userInfoContainer) {
+          const cadastroLink = document.getElementById('cadastro-link');
+  
+          if (cadastroLink) {
+            const logoutLink = document.createElement('a');
+            logoutLink.href = '#';
+            logoutLink.textContent = 'Logout / Sair';
+            logoutLink.style.textDecoration = 'none';
+            logoutLink.style.color = 'black';
+            logoutLink.addEventListener('click', handleLogout);
+  
+            cadastroLink.parentNode.replaceChild(logoutLink, cadastroLink);
+          } else {
+            console.error('Elemento #cadastro-link não encontrado na página.');
+          }
+  
+          const loginLink = document.getElementById('login-link');
+          const pipeLink = document.getElementById('pipe-link');
+          if (loginLink) loginLink.style.display = 'none';
+          if (pipeLink) pipeLink.style.display = 'none';
+  
+          const searchIcons = document.querySelectorAll('.busca_icones .Favoritos_compras');
+          searchIcons.forEach(icon => {
+            icon.removeAttribute('data-toggle');
+            icon.removeAttribute('data-target');
+            icon.addEventListener('click', handleIconClick);
+          });
+  
+          const minhaContaLink = document.querySelector('.minha-conta-link');
+          const botaoMinhaConta = document.querySelector('.botao-minha-conta');
+  
+          minhaContaLink.addEventListener('click', () => {
+            window.location.href = '/app/pages/perfil/perfil.html';
+          });
+  
+          botaoMinhaConta.textContent = 'LOGOUT / SAIR';
+          botaoMinhaConta.addEventListener('click', handleLogout);
+        } else {
+          console.error('Elemento #user-info não encontrado na página.');
+        }
       } else {
-        console.error("Elemento #cadastro-link não encontrado na página.");
+        console.log('Usuário não logado');
+  
+        localStorage.setItem('redirectUrl', window.location.href);
+  
+        showLoginModal(formData);
       }
-
-      const loginLink = document.getElementById("login-link");
-      const pipeLink = document.getElementById("pipe-link");
-      if (loginLink) loginLink.style.display = "none";
-      if (pipeLink) pipeLink.style.display = "none";
-
-      const searchIcons = document.querySelectorAll(
-        ".busca_icones .Favoritos_compras"
-      );
-      searchIcons.forEach((icon) => {
-        icon.removeAttribute("data-toggle");
-        icon.removeAttribute("data-target");
-        icon.addEventListener("click", handleIconClick);
-      });
-
-      const carrinhoButton = document.querySelector(".navbar-carrinho");
-
-      if (carrinhoButton) {
-        carrinhoButton.addEventListener("click", () => {
-          window.location.href = "/app/pages/carrinho/carrinho.html";
-        });
-      }
-    } else {
-      console.error("Elemento #user-info não encontrado na página.");
-    }
-  } else {
-    console.log("Usuário não logado");
-
-    localStorage.setItem("redirectUrl", window.location.href);
-
-    showLoginModal();
-  }
-
-  const minhaContaLink = document.querySelector(".minha-conta-link");
-  const botaoMinhaConta = document.querySelector(".botao-minha-conta");
-
-  if (loggedIn) {
-    minhaContaLink.addEventListener("click", () => {
-      window.location.href = "/app/pages/perfil/perfil.html";
     });
-
-    botaoMinhaConta.textContent = "LOGOUT / SAIR";
-    botaoMinhaConta.addEventListener("click", handleLogout);
-  } else {
-    minhaContaLink.setAttribute("data-toggle", "modal");
-    minhaContaLink.setAttribute("data-target", "#myModal");
-  }
-});
-
-function handleLogout(event) {
-  event.preventDefault();
-
-  localStorage.setItem("redirectUrl", window.location.href);
-
-  localStorage.removeItem("loggedin");
-
-  const redirectUrl = localStorage.getItem("redirectUrl") || "index.html";
-  window.location.href = redirectUrl;
-}
-
-function handleIconClick(event) {
-  event.preventDefault();
-
-  const iconId = event.currentTarget.id;
-  if (iconId === "search-icon") {
-    window.location.href = "/app/pages/perfil/perfil.html";
-  } else if (iconId === "outro-icon") {
-    window.location.href = "#";
-  }
-}
-
-function showLoginModal() {
-  const loginForm = document.getElementById("loginForm");
+  
+    function handleLogout(event) {
+      event.preventDefault();
+  
+      localStorage.setItem('redirectUrl', window.location.href);
+  
+      localStorage.removeItem('loggedin');
+  
+      const redirectUrl = localStorage.getItem('redirectUrl') || 'index.html';
+      window.location.href = redirectUrl;
+    }
+  
+    function handleIconClick(event) {
+      event.preventDefault();
+  
+      const iconId = event.currentTarget.id;
+      const loggedIn = localStorage.getItem('loggedin');
+  
+      if (loggedIn) {
+        if (iconId === 'search-icon' || iconId === 'outro-icon') {
+          window.location.href = '/app/pages/perfil/perfil.html';
+        }
+      } else {
+      }
+    }
+  
+    function showLoginModal(formData) {
+  const loginForm = document.getElementById('loginForm');
 
   if (loginForm) {
-    loginForm.addEventListener("submit", function (event) {
+    loginForm.addEventListener('submit', function (event) {
       event.preventDefault();
 
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
 
-      const emailErrorMessage = document.getElementById("emailErrorMessage");
-      const passwordErrorMessage = document.getElementById(
-        "passwordErrorMessage"
-      );
+      const emailErrorMessage = document.getElementById('emailErrorMessage');
+      const passwordErrorMessage = document.getElementById('passwordErrorMessage');
 
-      emailErrorMessage.textContent = "";
-      passwordErrorMessage.textContent = "";
+      emailErrorMessage.textContent = '';
+      passwordErrorMessage.textContent = '';
 
-      if (email === "joao@gmail.com" && password === "12345678") {
-        console.log("Login bem-sucedido");
+      if (email === formData.campo0 && password === formData.campo2) {
+        console.log('Login bem-sucedido');
 
-        localStorage.setItem("loggedin", "true");
+        localStorage.setItem('loggedin', 'true');
 
-        $("#myModal").modal("hide");
+        $('#myModal').modal('hide');
 
-        const redirectUrl = localStorage.getItem("redirectUrl") || "index.html";
+        const redirectUrl = localStorage.getItem('redirectUrl') || 'index.html';
 
         window.location.href = redirectUrl;
       } else {
-        if (emailErrorMessage && email !== "joao@gmail.com") {
-          emailErrorMessage.textContent = "Email incorreto";
+        if (emailErrorMessage && email !== formData.campo0) {
+          emailErrorMessage.textContent = 'Email incorreto';
         }
 
-        if (passwordErrorMessage && password !== "12345678") {
-          passwordErrorMessage.textContent = "Senha incorreta";
+        if (passwordErrorMessage && password !== formData.campo2) {
+          passwordErrorMessage.textContent = 'Senha incorreta';
         }
       }
     });
   } else {
-    console.error("Elemento #loginForm não encontrado na página.");
+    console.error('Elemento #loginForm não encontrado na página.');
   }
 }
