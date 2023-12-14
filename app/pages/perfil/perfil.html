@@ -425,142 +425,141 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
       const loggedIn = localStorage.getItem('loggedin');
-  
-    if (loggedIn) {
-      console.log('Usuário logado');
-  
-      const userInfoContainer = document.getElementById('user-info');
-  
-      if (userInfoContainer) {
-        const cadastroLink = document.getElementById('cadastro-link');
-  
-        if (cadastroLink) {
-          const logoutLink = document.createElement('a');
-          logoutLink.href = '#';
-          logoutLink.textContent = 'Logout / Sair';
-          logoutLink.style.textDecoration = 'none';
-          logoutLink.style.color = 'black';
-          logoutLink.addEventListener('click', handleLogout);
-  
-          cadastroLink.parentNode.replaceChild(logoutLink, cadastroLink);
-        } else {
-          console.error('Elemento #cadastro-link não encontrado na página.');
-        }
-  
-        const loginLink = document.getElementById('login-link');
-        const pipeLink = document.getElementById('pipe-link');
-        if (loginLink) loginLink.style.display = 'none';
-        if (pipeLink) pipeLink.style.display = 'none';
-  
-        const searchIcons = document.querySelectorAll('.busca_icones .Favoritos_compras');
-        searchIcons.forEach(icon => {
-          icon.removeAttribute('data-toggle');
-          icon.removeAttribute('data-target');
-          icon.addEventListener('click', handleIconClick);
-        });
-  
-        const carrinhoButton = document.querySelector('.navbar-carrinho');
-  
-        if (carrinhoButton) {
-          carrinhoButton.addEventListener('click', () => {
-            window.location.href = '/app/pages/carrinho/carrinho.html';
-          });
-        }
-      } else {
-        console.error('Elemento #user-info não encontrado na página.');
+      let formData;
+    
+      try {
+        formData = JSON.parse(localStorage.getItem('formData')) || {};
+        console.log('formData:', formData);
+      } catch (error) {
+        formData = {};
+        console.error('Erro ao obter formData do localStorage:', error);
       }
-    } else {
-      console.log('Usuário não logado');
-  
-      localStorage.setItem('redirectUrl', window.location.href);
-  
-      showLoginModal();
-    }
-  
-    const minhaContaLink = document.querySelector('.minha-conta-link');
-    const botaoMinhaConta = document.querySelector('.botao-minha-conta');
-  
-    if (loggedIn) {
-      minhaContaLink.addEventListener('click', () => {
-        window.location.href = '/app/pages/perfil/perfil.html';
-      });
-  
-      botaoMinhaConta.textContent = 'LOGOUT / SAIR';
-      botaoMinhaConta.addEventListener('click', handleLogout);
-    } else {
-      minhaContaLink.setAttribute('data-toggle', 'modal');
-      minhaContaLink.setAttribute('data-target', '#myModal');
-    }
-  });
-  
-  function handleLogout(event) {
-    event.preventDefault();
-  
-    localStorage.setItem('redirectUrl', '../index.html');
-  
-    localStorage.removeItem('loggedin');
-  
-    window.location.href = '../../../index.html'
-  }
-  
-  function handleIconClick(event) {
-    event.preventDefault();
-  
-    const iconId = event.currentTarget.id;
-    if (iconId === 'search-icon') {
-      window.location.href = '/app/pages/perfil/perfil.html';
-    } else if (iconId === 'outro-icon') {
-      window.location.href = '#';
-    }
-  }
-  
-  function showLoginModal() {
-    const loginForm = document.getElementById('loginForm');
-  
-    if (loginForm) {
-      loginForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-  
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-  
-        const emailErrorMessage = document.getElementById('emailErrorMessage');
-        const passwordErrorMessage = document.getElementById('passwordErrorMessage');
-  
-        emailErrorMessage.textContent = '';
-        passwordErrorMessage.textContent = '';
-  
-        if (email === 'joao@gmail.com' && password === '12345678') {
-          console.log('Login bem-sucedido');
-  
-          localStorage.setItem('loggedin', 'true');
-  
-          $('#myModal').modal('hide');
-  
-          const redirectUrl = localStorage.getItem('redirectUrl') || '../../index.html';
-  
-          window.location.href = redirectUrl;
-        } else {
-  
-          if (emailErrorMessage && email !== 'joao@gmail.com') {
-            emailErrorMessage.textContent = 'Email incorreto';
+    
+      console.log('loggedIn:', loggedIn);
+    
+      if (loggedIn) {
+        console.log('Usuário logado');
+      
+            const userInfoContainer = document.getElementById('user-info');
+      
+            if (userInfoContainer) {
+              const cadastroLink = document.getElementById('cadastro-link');
+      
+              if (cadastroLink) {
+                const logoutLink = document.createElement('a');
+                logoutLink.href = '#';
+                logoutLink.textContent = 'Logout / Sair';
+                logoutLink.style.textDecoration = 'none';
+                logoutLink.style.color = 'black';
+                logoutLink.addEventListener('click', handleLogout);
+      
+                cadastroLink.parentNode.replaceChild(logoutLink, cadastroLink);
+              } else {
+                console.error('Elemento #cadastro-link não encontrado na página.');
+              }
+      
+              const loginLink = document.getElementById('login-link');
+              const pipeLink = document.getElementById('pipe-link');
+              if (loginLink) loginLink.style.display = 'none';
+              if (pipeLink) pipeLink.style.display = 'none';
+      
+              const searchIcons = document.querySelectorAll('.busca_icones .Favoritos_compras');
+              searchIcons.forEach(icon => {
+                icon.removeAttribute('data-toggle');
+                icon.removeAttribute('data-target');
+                icon.addEventListener('click', handleIconClick);
+              });
+      
+              const minhaContaLink = document.querySelector('.minha-conta-link');
+              const botaoMinhaConta = document.querySelector('.botao-minha-conta');
+      
+              minhaContaLink.addEventListener('click', () => {
+                window.location.href = 'app/pages/perfil/perfil.html';
+              });
+      
+              botaoMinhaConta.textContent = 'LOGOUT / SAIR';
+              botaoMinhaConta.addEventListener('click', handleLogout);
+            } else {
+              console.error('Elemento #user-info não encontrado na página.');
+            }
+          } else {
+            console.log('Usuário não logado');
+      
+            localStorage.setItem('redirectUrl', window.location.href);
+      
+            showLoginModal(formData);
           }
-  
-          if (passwordErrorMessage && password !== '12345678') {
-            passwordErrorMessage.textContent = 'Senha incorreta';
+        });
+      
+        function handleLogout(event) {
+          event.preventDefault();
+      
+          localStorage.setItem('redirectUrl', window.location.href);
+      
+          localStorage.removeItem('loggedin');
+      
+          const redirectUrl = localStorage.getItem('redirectUrl') || 'index.html';
+          window.location.href = redirectUrl;
+        }
+      
+        function handleIconClick(event) {
+          event.preventDefault();
+      
+          const iconId = event.currentTarget.id;
+          const loggedIn = localStorage.getItem('loggedin');
+      
+          if (loggedIn) {
+            if (iconId === 'search-icon' || iconId === 'outro-icon') {
+              window.location.href = 'app/pages/perfil/perfil.html';
+            }
+          } else {
           }
         }
-      });
-    } else {
-      console.error('Elemento #loginForm não encontrado na página.');
-    }
-  }
-  
       
-</script>
+        function showLoginModal(formData) {
+      const loginForm = document.getElementById('loginForm');
+    
+      if (loginForm) {
+        loginForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+    
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+    
+          const emailErrorMessage = document.getElementById('emailErrorMessage');
+          const passwordErrorMessage = document.getElementById('passwordErrorMessage');
+    
+          emailErrorMessage.textContent = '';
+          passwordErrorMessage.textContent = '';
+    
+          if (email === formData.campo0 && password === formData.campo2) {
+            console.log('Login bem-sucedido');
+    
+            localStorage.setItem('loggedin', 'true');
+    
+            $('#myModal').modal('hide');
+    
+            const redirectUrl = localStorage.getItem('redirectUrl') || 'index.html';
+    
+            window.location.href = redirectUrl;
+          } else {
+            if (emailErrorMessage && email !== formData.campo0) {
+              emailErrorMessage.textContent = 'Email incorreto';
+            }
+    
+            if (passwordErrorMessage && password !== formData.campo2) {
+              passwordErrorMessage.textContent = 'Senha incorreta';
+            }
+          }
+        });
+      } else {
+        console.error('Elemento #loginForm não encontrado na página.');
+      }
+    }
+      </script>
 
 <script>
     function closeNav() {

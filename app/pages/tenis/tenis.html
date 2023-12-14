@@ -131,11 +131,11 @@
     <div class="sidebar d-lg-none d-xl-none">
       <div class="navegacao">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a class="primeira-navegacao" href="/app/pages/lancamentos/lancamentos.html">LANÇAMENTOS</a>
+        <a class="primeira-navegacao" href="app/pages/lancamentos/lancamentos.html">LANÇAMENTOS</a>
         <p>____________________________</p>
-        <a href="/app/pages/masculino/masculino.html">MASCULINO</a>
+        <a href="app/pages/masculino/masculino.html">MASCULINO</a>
         <p>____________________________</p>
-        <a class="ultima-navegacao" href="/app/pages/feminino/feminino.html">FEMININO</a>
+        <a class="ultima-navegacao" href="app/pages/feminino/feminino.html">FEMININO</a>
         <p class="divisao">____________________________</p>
       </div>
       <div class="minha-conta">
@@ -269,7 +269,7 @@
           const botaoMinhaConta = document.querySelector('.botao-minha-conta');
   
           minhaContaLink.addEventListener('click', () => {
-            window.location.href = '/app/pages/perfil/perfil.html';
+            window.location.href = 'app/pages/perfil/perfil.html';
           });
   
           botaoMinhaConta.textContent = 'LOGOUT / SAIR';
@@ -305,7 +305,7 @@
   
       if (loggedIn) {
         if (iconId === 'search-icon' || iconId === 'outro-icon') {
-          window.location.href = '/app/pages/perfil/perfil.html';
+          window.location.href = 'app/pages/perfil/perfil.html';
         }
       } else {
       }

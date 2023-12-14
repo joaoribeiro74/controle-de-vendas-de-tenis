@@ -197,7 +197,7 @@ function createSneakerDiv(sneaker) {
           <div class="produto">
             <a class="produtos" aria-label="${
               sneaker.name
-            }" href="app/pages/tenis/tenis.html?tenis=${encodeURIComponent(
+            }" href="../tenis/tenis.html?tenis=${encodeURIComponent(
     sneaker.name
   )}">
               <div class="imagem-produto">
