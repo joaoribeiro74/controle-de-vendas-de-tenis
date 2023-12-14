@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 localStorage.setItem('selectedTenis', JSON.stringify(selectedTenis));
 
-                window.location.href = "/app/pages/perfil/perfil.html";
+                window.location.href = "app/pages/perfil/perfil.html";
               } else {
                 console.error('Usuário não está logado. Redirecionar para a página de login ou exibir mensagem.');
               }
@@ -197,7 +197,7 @@ function createSneakerDiv(sneaker) {
           <div class="produto">
             <a class="produtos" aria-label="${
               sneaker.name
-            }" href="/app/pages/tenis/tenis.html?tenis=${encodeURIComponent(
+            }" href="app/pages/tenis/tenis.html?tenis=${encodeURIComponent(
     sneaker.name
   )}">
               <div class="imagem-produto">
@@ -311,7 +311,7 @@ fetch("produtos.json")
           const botaoMinhaConta = document.querySelector('.botao-minha-conta');
   
           minhaContaLink.addEventListener('click', () => {
-            window.location.href = '/app/pages/perfil/perfil.html';
+            window.location.href = 'app/pages/perfil/perfil.html';
           });
   
           botaoMinhaConta.textContent = 'LOGOUT / SAIR';
@@ -347,7 +347,7 @@ fetch("produtos.json")
   
       if (loggedIn) {
         if (iconId === 'search-icon' || iconId === 'outro-icon') {
-          window.location.href = '/app/pages/perfil/perfil.html';
+          window.location.href = 'app/pages/perfil/perfil.html';
         }
       } else {
       }
