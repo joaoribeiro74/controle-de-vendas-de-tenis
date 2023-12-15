@@ -347,7 +347,7 @@ fetch("produtos.json")
   
       if (loggedIn) {
         if (iconId === 'search-icon' || iconId === 'outro-icon') {
-          window.location.href = 'app/pages/perfil/perfil.html';
+          window.location.href = '../perfil/perfil.html';
         }
       } else {
       }
